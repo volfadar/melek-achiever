@@ -7,8 +7,8 @@
     "distDir": "../out"
   },
   "package": {
-    "productName": "melek-tauri-management",
-    "version": "0.1.0"
+    "productName": "Melek Achiever",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -46,8 +46,8 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
+      "category": "Productivity",
+      "copyright": "Copyright (c) 2024 Ibnu Rasikh",
       "deb": {
         "depends": []
       },
@@ -59,7 +59,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "melek-team-management-tauri",
+      "identifier": "melek-achiever-app",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -81,14 +81,22 @@
       "csp": null
     },
     "updater": {
-      "active": false
+      "active": true,
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEFGOTgxOEREMkU0Q0ZGOEEKUldTSy8wd3UzUmlZcjJTcEZJUXVzbFI4ei9ocTlnL1RMcEZmTmdVNW80a0JUVGR4OElnc2duZGYK",
+      "endpoints": [
+        "https://github.com/volfadar/melek-achiever/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
     },
     "windows": [
       {
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "melek-tauri-management",
+        "title": "Melek Achiever",
         "width": 800
       }
     ],

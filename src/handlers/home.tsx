@@ -1,6 +1,6 @@
 import { actions, store } from '@/state';
 import { Activity } from '@/types/activity';
-import { invoke } from '@tauri-apps/api';
+import { invoke } from '@tauri-apps/api/tauri';
 
 import { toast } from 'sonner';
 
