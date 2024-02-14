@@ -11,6 +11,7 @@ import {
   requestPermission,
   sendNotification,
 } from '@tauri-apps/api/notification';
+import { checkUpdate } from '@tauri-apps/api/updater';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -23,7 +24,12 @@ export default function Home() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => filter_events([data]), [filters]);
   useEffect(() => changeDate(), [date]);
-  useEffect(() => setClient(true), []);
+  useEffect(() => {
+    setClient(true);
+    checkUpdate().then(({ shouldUpdate, manifest }) => {
+      console.log({ shouldUpdate, manifest });
+    });
+  }, []);
 
   if (!client) return <></>;
 
